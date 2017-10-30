@@ -10,6 +10,7 @@ const express = require('express'),
 axios = require('axios') 
       
 const app = express();
+console.log(process.env.SECRET)
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
@@ -18,7 +19,7 @@ app.use(session({
 app.use(bodyParser.json()) 
 app.use(cors())
 app.use( express.static( `${__dirname}/../build` ) );
-
+console.log(__dirname)
 
 
 
