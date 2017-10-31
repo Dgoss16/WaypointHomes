@@ -14,9 +14,7 @@ CREATE TABLE Code(
     email VARCHAR(100),
     propID INTEGER,
     code INTEGER,
-    showdate YYYY-MM-DD,
-    showtime HH:MM,
-    ampm 
+    Date_time varchar (30) default  TO_CHAR(timestamp, 'yyyy-mm-dd hh:mi AM')
 )
 
 CREATE TABLE UserInfo(

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../style/navbar.css';
+import '../../style/home.css'
 import axios from 'axios';
 import logo from '../../wplogo.png';
 import {Link} from 'react-router-dom';
@@ -45,7 +46,7 @@ class allProp extends Component {
 
                 
             
-                <select id="zipCode" name="zip">
+                <select className="dropDown">
                     <option value="85281">85281</option>
                     <option value="85041">85041</option>
                     <option value="85008">85008</option>
