@@ -24,6 +24,11 @@ console.log(__dirname)
 
 //database
 
+<<<<<<< HEAD
+=======
+//database
+
+>>>>>>> 8ac4a502bfefc13721cbb1ee6c7b9385ca154fc5
 // app.get('/api/allprops', (req,res) => {
     
 // })

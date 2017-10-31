@@ -4,7 +4,6 @@ import axios from 'axios';
 import logo from '../../wplogo.png';
 import {Link} from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
-import Properties from '../Properties/Properties'
 
 
 class allProp extends Component {
@@ -42,15 +41,20 @@ class allProp extends Component {
                      <div className="Contact"><Link to="/contact" style={{textDecoration: 'none', color: "white"}}>CONTACT</Link></div>
                      <div className="Login"><Link to="/login" style={{textDecoration: 'none', color: "white"}}>LOGIN</Link> </div>
                 </div>
-            
 
 
                 
+            
+                <select id="zipCode" name="zip">
+                    <option value="85281">85281</option>
+                    <option value="85041">85041</option>
+                    <option value="85008">85008</option>
+                    <option value="85029">85029</option>
+                    <option value="85031">85031</option>
+                </select>
+            
 
-
-
-
-                <button onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+                <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
 
 
 
