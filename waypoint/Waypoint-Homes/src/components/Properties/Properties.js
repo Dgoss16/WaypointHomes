@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
+import Footer from '../Navbar/Footer';
+import Header from '../Navbar/Header';
 
 export default class Properties extends Component{
     constructor(){
@@ -58,8 +60,10 @@ export default class Properties extends Component{
     render(){
         return(
             <div>
+                <Header/>
                 {this.exampleMap()}
                 <div style={{color: 'blue'}}>Hello</div>
+                <Footer/>
             </div>
         )
     }
