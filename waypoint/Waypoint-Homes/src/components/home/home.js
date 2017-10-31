@@ -5,7 +5,7 @@ import axios from 'axios';
 import logo from '../../wplogo.png';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
-
+import {Link} from 'react-router-dom';
 
 class allProp extends Component {
     constructor() {

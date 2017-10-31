@@ -41,7 +41,7 @@ class App extends Component {
             zipcode = {this.state.zip}
           />
         )}/>
-        <Route path='/property/:id' component={SingleProp}/>
+        <Route path='/property' component={SingleProp}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
         <Route path='/about' component={AboutUs}/>
