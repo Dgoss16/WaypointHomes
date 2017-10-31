@@ -5,6 +5,7 @@ import axios from 'axios';
 import logo from '../../wplogo.png';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
+import {Link} from 'react-router-dom'
 
 
 class allProp extends Component {
@@ -61,7 +62,7 @@ class allProp extends Component {
                                 <option value="85029">85029</option>
                                 <option value="85031">85031</option>
                             </select>
-                            <Link to="/properties"><button type="button" onClick={() => {this.props.handleClick('85281')} }>CLICK MEEHHH</button></Link>
+                            <Link to="/properties"><button type="button" onClick={() => {this.props.handleClick(this.state.zip)} }>CLICK MEEHHH</button></Link>
                     </div>
                 </div>
             <Footer/>
