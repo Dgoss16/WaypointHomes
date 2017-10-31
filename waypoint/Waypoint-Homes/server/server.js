@@ -22,8 +22,11 @@ app.use( express.static( `${__dirname}/../build` ) );
 console.log(__dirname)
 
 
+//database
 
-
+// app.get('/api/allprops', (req,res) => {
+    
+// })
 
 
 
