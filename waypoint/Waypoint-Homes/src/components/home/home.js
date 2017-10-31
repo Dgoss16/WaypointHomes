@@ -28,16 +28,16 @@ class allProp extends Component {
                          <FontAwesome name='twitter' />
                          </a>
 
-                         <a href='' style={{textDecoration: 'none', color: "white"}}>
-                         <FontAwesome name=''/>
+                         <a href='https://plus.google.com/+WaypointHomesRiverside' style={{textDecoration: 'none', color: "white"}}>
+                         <FontAwesome name='google-plus'/>
                          </a>
 
-                         <a href='' style={{textDecoration: 'none', color: "white"}}>
-                         <FontAwesome name=''/>
+                         <a href='https://www.youtube.com/channel/UCi_f2fdwgV9HIrj_FXPOimw' style={{textDecoration: 'none', color: "white"}}>
+                         <FontAwesome name='youtube-square'/>
                          </a>
                          
-                         <a href='' style={{textDecoration: 'none', color: "white"}}>
-                         <FontAwesome name=''/>
+                         <a href='https://www.pinterest.com/waypoint_homes/' style={{textDecoration: 'none', color: "white"}}>
+                         <FontAwesome name='pinterest'/>
                          </a>
                      </div>
                 
