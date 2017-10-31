@@ -23,7 +23,11 @@ console.log(__dirname)
 
 
 
+//database
 
+// app.get('/api/allprops', (req,res) => {
+    
+// })
 
 
 
