@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../style/navbar.css';
-import '../../style/home.css'
+import '../../style/home.css';
 import axios from 'axios';
 import logo from '../../wplogo.png';
 import {Link} from 'react-router-dom';
@@ -8,12 +8,12 @@ import FontAwesome from 'react-fontawesome';
 
 
 class allProp extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state={
             allprops:[],
             Url:'https://waypointhomes.com/api/properties?mapBounds=33.210791%2C-112.357154%2C33.553661%2C-111.883369',
-
+            zip:''
         }
     }
     
@@ -28,11 +28,18 @@ class allProp extends Component {
         })
     }
     
-    
+    handleChange(event) {
+        let value = event.target.value;
+        
+        this.setState({
+            zip: value
+        }, ()=>{console.log(this.state.zip)});
+    }
     
     
     render() {
         return (
+        <div>
             <div>
                 <div className="navbar">
                      <div className="Logo"> <Link to= '/' style={{textDecoration: 'none', color: "white"}}><img src={logo}/> </Link></div>
@@ -46,22 +53,25 @@ class allProp extends Component {
 
                 
             
-                <select className="dropDown">
-                    <option value="85281">85281</option>
-                    <option value="85041">85041</option>
-                    <option value="85008">85008</option>
-                    <option value="85029">85029</option>
-                    <option value="85031">85031</option>
-                </select>
             
 
-                <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+               
+                </div>
+                
+                <div id="shop">
+                    <div className="content">
+                        <img src="https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg"/> 
+                            <select className="dropDown" onChange={(e) => this.handleChange(e)}>
+                                <option value="85281">85281</option>
+                                <option value="85041">85041</option>
+                                <option value="85008">85008</option>
+                                <option value="85029">85029</option>
+                                <option value="85031">85031</option>
+                            </select>
+                            <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+                    </div>
 
-
-
-
-
-                <div className="footer">
+                    <div className="footer">
                          <a href= 'https://www.facebook.com/WaypointHomes/' style={{textDecoration: 'none', color: "white"}}> <FontAwesome name='facebook-square' />
                          </a>
 
@@ -80,8 +90,8 @@ class allProp extends Component {
                          <a href='https://www.pinterest.com/waypoint_homes/' style={{textDecoration: 'none', color: "white"}}>
                          <FontAwesome name='pinterest'/>
                          </a>
+                    </div>
                 </div>
-                
             </div>
         );
     }
