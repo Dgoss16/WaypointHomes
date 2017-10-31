@@ -44,11 +44,17 @@ class allProp extends Component {
 
 
                 
+            
+                <select id="zipCode" name="zip">
+                    <option value="85281">85281</option>
+                    <option value="85041">85041</option>
+                    <option value="85008">85008</option>
+                    <option value="85029">85029</option>
+                    <option value="85031">85031</option>
+                </select>
+            
 
-
-
-
-                <button onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+                <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
 
 
 
