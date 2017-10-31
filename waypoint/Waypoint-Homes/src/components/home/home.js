@@ -55,7 +55,7 @@ class allProp extends Component {
                 </select>
             
 
-                <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+                <Link to="/properties"><button type="button" onClick={() => {this.props.handleClick('85281')} }>CLICK MEEHHH</button></Link>
 
 
 
