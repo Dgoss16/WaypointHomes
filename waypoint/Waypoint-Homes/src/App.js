@@ -6,12 +6,14 @@ import Favorites from './components/user/favorites';
 import AboutUs from './components/aboutUs/aboutUs';
 import UserInfo from './components/user/userInfo'
 import ContactUs from './components/contactUs/contactUs';
+import Properties from './components/Properties/Properties'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Route exact path='/' component={Home}/>
+        <Route path='/properties' component={Properties}/>
         <Route path='/property/:id' component={SingleProp}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
