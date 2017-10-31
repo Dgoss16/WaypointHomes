@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #434343;
+    color: white;
+    width: auto;
+    height: 8vh;
+    font-size: 12px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #434343;
+    color: white;
+    width: auto;
+    height: 8vh;
+    font-size: 20px;
+}
