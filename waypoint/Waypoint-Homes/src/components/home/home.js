@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../style/navbar.css';
+import '../../style/home.css'
 import axios from 'axios';
 import logo from '../../wplogo.png';
 import {Link} from 'react-router-dom';
@@ -44,11 +45,17 @@ class allProp extends Component {
 
 
                 
+            
+                <select className="dropDown">
+                    <option value="85281">85281</option>
+                    <option value="85041">85041</option>
+                    <option value="85008">85008</option>
+                    <option value="85029">85029</option>
+                    <option value="85031">85031</option>
+                </select>
+            
 
-
-
-
-                <button onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
+                <button type="button" onClick={() => {this.handleClick()} }>CLICK MEEHHH</button>
 
 
 
