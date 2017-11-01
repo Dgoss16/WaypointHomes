@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
+import pops from '../../style/props.css';
 
 export default class Properties extends Component{
     constructor(){
@@ -56,10 +57,22 @@ export default class Properties extends Component{
     exampleMap(){
         var List = this.state.properties.map((x, i)=>{
             return(
-                <div key={i}>
-                    <img src={`https://cah-com-res.cloudinary.com/${x.location}`}/>
-                    <div>$$$${x.effectiveRent}</div>
-                    <div>{x.address1}</div>
+                <div className='oneprop' key={i}>
+                    <div className='fix'>
+                    <img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}`}/>
+
+                    
+                    <div className='propinfo'>
+                    <h3>{x.address1}</h3>
+                    <div>{x.city}, {x.state} {x.zip}</div>
+                   
+                    <div>${x.effectiveRent}</div>
+                    <div>{x.beds} Beds </div>
+                    <div>{x.baths} Baths</div>
+                    <div>{x.squareFeet} Sqft</div>
+                    </div>
+                    </div>
+
                 </div>
             )
         })
@@ -71,8 +84,8 @@ export default class Properties extends Component{
             <div>
                 <Header/>
                 {this.exampleMap()}
-                <div style={{color: 'blue'}}>Hello</div>
-                <div>{this.state.propertiesUrl}noice</div>
+                <div style={{color: 'blue'}}></div>
+                <div>{this.state.propertiesUrl}</div>
             </div>
         )
     }
