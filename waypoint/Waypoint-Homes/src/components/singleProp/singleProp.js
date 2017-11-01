@@ -21,19 +21,35 @@ componentDidMount(){
         this.setState({
             imageUrl:this.state.photoUrl + res.data.photos[0].public_id,
             propertyDetails: res.data
+        }, ()=>{
+            console.log(this.state.propertyDetails)
         })
-    })   
+    })
 }
+// showImages(){
+//     var photos = this.state.propertyDetails.photos.map((x, i)=>{
+//         return(
+//             <div key = {i}>
+//                 <image src={this.state.photoUrl + x.public_id}></image>
+//             </div>
+//         )
+//     })
+//     return photos
+// }
+
 
     render() {
 
-
+console.log(this.state.propertyDetails.photos)
         return (
             <div>
                 <Header/>   
                 <div>
                     <div className="Images"> <img src={this.state.imageUrl}/></div>
                     <div className="textpropdetails">
+                        <div className="propertyImages">
+                            {/* {this.showImages()} */}
+                        </div>
                         <p>{this.props.propertyInfo.street1}</p>
                         <p>{this.props.propertyInfo.cityStateZip}</p>
                         <p>{this.props.propertyInfo.squareFeet}</p>

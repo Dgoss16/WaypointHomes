@@ -86,8 +86,7 @@ export default class Properties extends Component{
                 
                 <Header/>
                 {this.exampleMap()}
-                <div style={{color: 'blue'}}>Hello</div>
-                <div>{this.state.propertiesUrl}noice</div>
+
             </div>
         )
     }
