@@ -85,10 +85,10 @@ console.log(this.state.propertyDetails)
                     <div>Set Up Your Self Showing</div>
                     <input type='text' placeholder="First Name" />
                     <input type='text' placeholder="Last Name"/>
-                    <input type='text' placeholder="(000) 000-0000"/>
+                    <input type='text' placeholder="Phone Number"/>
                     <input type='text' placeholder="Email"/>
                     <div>Monthly Gross Household Income</div>
-                    <input type='text' placeholder="HH income"/>
+                    <input type='text' placeholder="$USD Income"/>
                     <form>
                         Yes<input type="radio" name="chooseone"/>
                         No<input type="radio" name="chooseone"/>
@@ -97,6 +97,7 @@ console.log(this.state.propertyDetails)
                         Yes<input type="radio" name="chooseone"/>
                         No<input type="radio" name="chooseone"/>
                     </form>
+                    What is your credit score?
                     <select>
                         <option>-Select-</option>
                         <option>Greater Than 600</option>
