@@ -7,21 +7,21 @@ class singleProp extends Component {
 constructor(){
     super()
     this.state={
-        propertyDetails:'',
+        propertyPhotos:'',
+        propertyAddress: '',
         photoUrl:'https://cah-com-res.cloudinary.com/',
         imageUrl:"",
-        customerInfo: {
-            first: '',
-            last: '',
-            phone: '',
-            email:'',
-            income: '',
-            eviction: '',
-            bankruptcy: '',
-            credit: '',
-            appointmentDate: '',
-            appointmentTime: ''
-        }
+        first: '',
+        last: '',
+        phone: '',
+        email:'',
+        income: '',
+        eviction: '',
+        bankruptcy: '',
+        credit: '',
+        appointmentDate: '',
+        appointmentTime: ''
+        
     }
 }
 
@@ -31,15 +31,16 @@ componentDidMount(){
     axios.get(`https://waypointhomes.com/api/properties/${this.props.propertyInfo.url_slug}`).then((res)=>{
         this.setState({
             imageUrl:this.state.photoUrl + res.data.photos[0].public_id,
-            propertyDetails: res.data.photos
+            propertyPhotos: res.data.photos,
+            propertyAddress: this.props.propertyInfo.address1
         }, ()=>{
         })
     })
 }
 
 showImages(){
-    if(this.state.propertyDetails){
-        var photos = this.state.propertyDetails.photos.map((x, i)=>{
+    if(this.state.propertyPhotos){
+        var photos = this.state.propertyPhotos.photos.map((x, i)=>{
             return(
                 <div key = {i}>
                     <img src={this.state.photoUrl + x.public_id} />>
@@ -53,8 +54,8 @@ showImages(){
 
     render() {
     var images = []
-    if(this.state.propertyDetails){
-        images = this.state.propertyDetails.map((x, i)=>{
+    if(this.state.propertyPhotos){
+        images = this.state.propertyPhotos.map((x, i)=>{
             return(
                 <div key = {i}>
                     <img src={this.state.photoUrl + x.public_id} />
@@ -62,7 +63,6 @@ showImages(){
             )
         })
     }
-console.log(this.state.propertyDetails)
         return (
             <div>
                 <Header/>   
@@ -83,30 +83,76 @@ console.log(this.state.propertyDetails)
                 </div>
                 <div className="formContainer">
                     <div>Set Up Your Self Showing</div>
-                    <input type='text' placeholder="First Name" />
-                    <input type='text' placeholder="Last Name"/>
-                    <input type='text' placeholder="(000) 000-0000"/>
-                    <input type='text' placeholder="Email"/>
+                    <input type='text' placeholder="First Name" onChange={(e)=>{
+                        this.setState({
+                            first: e.target.value
+                        })
+                    }}/>
+                    <input type='text' placeholder="Last Name" onChange={(e)=>{
+                        this.setState({
+                            last: e.target.value
+                        })
+                    }}/>
+                    <input type='text' placeholder="(000) 000-0000" onChange={(e)=>{
+                        this.setState({
+                            phone: e.target.value
+                        })
+                    }}/>
+                    <input type='text' placeholder="Email" onChange={(e)=>{
+                        this.setState({
+                            email: e.target.value
+                        })
+                    }}/>
                     <div>Monthly Gross Household Income</div>
-                    <input type='text' placeholder="HH income"/>
-                    <form>
-                        Yes<input type="radio" name="chooseone"/>
-                        No<input type="radio" name="chooseone"/>
+                    <input type='text' placeholder="HH income" onChange={(e)=>{
+                        this.setState({
+                            income: e.target.value
+                        })
+                    }}/>
+                    <form onChange={(e)=>{
+                        this.setState({
+                            bankruptcy: e.target.value
+                        }, ()=>{
+                            console.log(this.state.bankruptcy)
+                        })
+                    }}>
+                    <div>Have you ever filed for Bankruptcy</div>
+                        Yes<input type="radio" name="chooseone" value="Yes"/>
+                        No<input type="radio" name="chooseone" value="No"/>
                     </form>
-                    <form>
-                        Yes<input type="radio" name="chooseone"/>
-                        No<input type="radio" name="chooseone"/>
+                    <form onChange={(e)=>{
+                        this.setState({
+                            eviction: e.target.value
+                        })
+                    }}>
+                    <div>Have you ever been Evicted</div>
+                        Yes<input type="radio" name="chooseone" value="Yes"/>
+                        No<input type="radio" name="chooseone" value="No"/>
                     </form>
-                    <select>
+                    <select onChange={(e)=>{
+                        this.setState({
+                            credit: e.target.value
+                        })
+                    }}>
                         <option>-Select-</option>
-                        <option>Greater Than 600</option>
-                        <option>Less Than 600</option>
-                        <option>I Don't Know</option>
+                        <option value="Greater Than 600">Greater Than 600</option>
+                        <option value="Less Than 600">Less Than 600</option>
+                        <option value="I Don't Know">I Don't Know</option>
                     </select>
-                    <input type="text" placeholder="MM/DD/YY"/>
+                    <input type="text" placeholder="MM/DD/YY" onChange={(e)=>{
+                        this.setState({
+                            appointmentDate: e.target.value
+                        })
+                    }}/>
                     <div>Time</div>
                     <form>
-                        <select>
+                        <select onChange={(e)=>{
+                        this.setState({
+                            appointmentTime: e.target.value
+                        }, ()=>{
+                            console.log(this.state)
+                        })
+                    }}>
                             <option>9am</option>
                             <option>10am</option>
                             <option>11am</option>
