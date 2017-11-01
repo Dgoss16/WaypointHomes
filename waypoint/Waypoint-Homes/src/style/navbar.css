@@ -19,3 +19,19 @@
     height: 8vh;
     font-size: 20px;
 }
+
+.form{
+    padding-left: 20px;
+}
+
+.call{
+    padding-left: 20px;
+}
+
+.email{
+    padding-left: 20px;
+}
+
+.visit{
+    padding-left: 20px;
+}

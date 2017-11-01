@@ -34,7 +34,7 @@ class contactUs extends Component {
                     <p> <a href='mailto:resident@waypointhomes.com'>residents@waypointhomes.com</a></p>
                 </div>
 
-                <div className='Visit'>
+                <div className='visit'>
                     <h3>VISIT US:</h3>
                     <p>Find a Waypoint office near you</p>
                 </div>
