@@ -2,8 +2,12 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
+<<<<<<< HEAD
 import './Properties.css';
 import {Link} from 'react-router-dom'
+=======
+import pops from '../../style/props.css';
+>>>>>>> 0bb7ab37e44ce467d09fbdb4686fcc4a5bc91905
 
 export default class Properties extends Component{
     constructor(){
@@ -64,16 +68,22 @@ export default class Properties extends Component{
     exampleMap(){
         var List = this.state.properties.map((x, i)=>{
             return(
-                <div key={i} className="propertyContainer">
-                    <Link to="/property"><img src={`https://cah-com-res.cloudinary.com/${x.location}`} onClick={()=>{
-                        this.props.currentProperty(x)
-                    }}/></Link>
-                    <div className="propertyInfo">
-                        <div>$$$${x.effectiveRent}</div>
-                        <div>{x.address1}</div>
-                        <div>{x.beds}</div>
-                        <div>{x.baths}</div>
+                <div className='oneprop' key={i}>
+                    <div className='fix'>
+                    <img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}`}/>
+
+                    
+                    <div className='propinfo'>
+                    <h3>{x.address1}</h3>
+                    <div>{x.city}, {x.state} {x.zip}</div>
+                   
+                    <div>${x.effectiveRent}</div>
+                    <div>{x.beds} Beds </div>
+                    <div>{x.baths} Baths</div>
+                    <div>{x.squareFeet} Sqft</div>
                     </div>
+                    </div>
+
                 </div>
             )
         })
@@ -86,7 +96,7 @@ export default class Properties extends Component{
                 
                 <Header/>
                 {this.exampleMap()}
-
+                <div>{this.state.propertiesUrl}</div>
             </div>
         )
     }
