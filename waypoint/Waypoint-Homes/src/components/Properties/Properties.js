@@ -2,12 +2,9 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
-<<<<<<< HEAD
 import './Properties.css';
 import {Link} from 'react-router-dom'
-=======
-import pops from '../../style/props.css';
->>>>>>> 0bb7ab37e44ce467d09fbdb4686fcc4a5bc91905
+import '../../style/props.css';
 
 export default class Properties extends Component{
     constructor(){
@@ -70,9 +67,9 @@ export default class Properties extends Component{
             return(
                 <div className='oneprop' key={i}>
                     <div className='fix'>
-                    <img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}`}/>
-
-                    
+                    <Link to="/property"><img src={`https://cah-com-res.cloudinary.com/${x.location}`} onClick={()=>{
+                       this.props.currentProperty(x)
+                   }}/></Link>                
                     <div className='propinfo'>
                     <h3>{x.address1}</h3>
                     <div>{x.city}, {x.state} {x.zip}</div>
@@ -93,7 +90,6 @@ export default class Properties extends Component{
     render(){
         return(
             <div>
-                
                 <Header/>
                 {this.exampleMap()}
                 <div>{this.state.propertiesUrl}</div>

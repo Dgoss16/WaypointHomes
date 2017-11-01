@@ -83,7 +83,7 @@ console.log(this.state.propertyDetails)
                 </div>
                 <div className="formContainer">
                     <div>Set Up Your Self Showing</div>
-                    <input type='text' placeholder="First Name"/>
+                    <input type='text' placeholder="First Name" />
                     <input type='text' placeholder="Last Name"/>
                     <input type='text' placeholder="(000) 000-0000"/>
                     <input type='text' placeholder="Email"/>
