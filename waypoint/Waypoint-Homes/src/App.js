@@ -12,12 +12,20 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      zip: ''
+      zip: '',
+      currentProperty: ''
     }
     this.handleClick = this.handleClick.bind(this)
+    this.currentProperty = this.currentProperty.bind(this)
   }
-  
-  
+
+  currentProperty(x){
+    this.setState({
+      currentProperty: x
+    }, ()=>{
+      console.log(this.state.currentProperty)
+    })
+  }
 
   handleClick(x){
     this.setState({
@@ -25,7 +33,6 @@ class App extends Component {
     }, () => {
       console.log(this.state.zip)
     })
-    console.log(this.state.zip)
   }
   
   render() {
@@ -38,10 +45,13 @@ class App extends Component {
         )}/>
         <Route path='/properties' render={()=>(
           <Properties 
-            zipcode = {this.state.zip}
+            zipcode = {this.state.zip} 
+            currentProperty = {this.currentProperty}
           />
         )}/>
-        <Route path='/property/:id' component={SingleProp}/>
+        <Route path='/property' render={()=>(
+          <SingleProp propertyInfo = {this.state.currentProperty}/>
+        )}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
         <Route path='/about' component={AboutUs}/>

@@ -17,7 +17,7 @@ constructor(){
 
 
 componentDidMount(){
-    axios.get('https://waypointhomes.com/api/properties/1738-w-lacewood-pl-phoenix-az-85045-abcc').then((res)=>{
+    axios.get(`https://waypointhomes.com/api/properties/${this.props.propertyInfo.url_slug}`).then((res)=>{
         this.setState({
             imageUrl:this.state.photoUrl + res.data.photos[0].public_id,
             propertyDetails: res.data
@@ -34,13 +34,13 @@ componentDidMount(){
                 <div>
                     <div className="Images"> <img src={this.state.imageUrl}/></div>
                     <div className="textpropdetails">
-                        <p>{this.state.propertyDetails.street1}</p>
-                        <p>{this.state.propertyDetails.cityStateZip}</p>
-                        <p>{this.state.propertyDetails.squareFeet}</p>
-                        <p>{this.state.propertyDetails.beds}</p>
-                        <p>{this.state.propertyDetails.baths}</p>
-                        <p>{this.state.propertyDetails.longDescription}</p>
-                        <p>{this.state.propertyDetails.effectiveRent}</p>
+                        <p>{this.props.propertyInfo.street1}</p>
+                        <p>{this.props.propertyInfo.cityStateZip}</p>
+                        <p>{this.props.propertyInfo.squareFeet}</p>
+                        <p>{this.props.propertyInfo.beds}</p>
+                        <p>{this.props.propertyInfo.baths}</p>
+                        <p>{this.props.propertyInfo.longDescription}</p>
+                        <p>{this.props.propertyInfo.effectiveRent}</p>
                        
                     </div>
 
