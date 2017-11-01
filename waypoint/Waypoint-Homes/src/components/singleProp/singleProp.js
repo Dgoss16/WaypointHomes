@@ -83,6 +83,7 @@ showImages(){
                 </div>
                 <div className="formContainer">
                     <div>Set Up Your Self Showing</div>
+<<<<<<< HEAD
                     <input type='text' placeholder="First Name" onChange={(e)=>{
                         this.setState({
                             first: e.target.value
@@ -119,6 +120,17 @@ showImages(){
                     <div>Have you ever filed for Bankruptcy</div>
                         Yes<input type="radio" name="chooseone" value="Yes"/>
                         No<input type="radio" name="chooseone" value="No"/>
+=======
+                    <input type='text' placeholder="First Name" />
+                    <input type='text' placeholder="Last Name"/>
+                    <input type='text' placeholder="Phone Number"/>
+                    <input type='text' placeholder="Email"/>
+                    <div>Monthly Gross Household Income</div>
+                    <input type='text' placeholder="$USD Income"/>
+                    <form>
+                        Yes<input type="radio" name="chooseone"/>
+                        No<input type="radio" name="chooseone"/>
+>>>>>>> 5569fe1bf99e9583f857c7cc579543d8036aa2f6
                     </form>
                     <form onChange={(e)=>{
                         this.setState({
@@ -129,11 +141,16 @@ showImages(){
                         Yes<input type="radio" name="chooseone" value="Yes"/>
                         No<input type="radio" name="chooseone" value="No"/>
                     </form>
+<<<<<<< HEAD
                     <select onChange={(e)=>{
                         this.setState({
                             credit: e.target.value
                         })
                     }}>
+=======
+                    What is your credit score?
+                    <select>
+>>>>>>> 5569fe1bf99e9583f857c7cc579543d8036aa2f6
                         <option>-Select-</option>
                         <option value="Greater Than 600">Greater Than 600</option>
                         <option value="Less Than 600">Less Than 600</option>
