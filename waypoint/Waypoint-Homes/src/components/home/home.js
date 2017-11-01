@@ -31,7 +31,6 @@ class allProp extends Component {
     
     handleChange(event) {
         let value = event.target.value;
-        
         this.setState({
             zip: value
         }, ()=>{console.log(this.state.zip)});
@@ -41,33 +40,21 @@ class allProp extends Component {
     render() {
         return (
         <div>
-            <div>
-               <Header/>
-
-
-                
-            
-            
-
-               
-                </div>
-                
-                <div id="shop">
-                    <div className="content">
-                        <img src="https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg"/> 
-                            <select className="dropDown" onChange={(e) => this.handleChange(e)}>
-                                <option value="85281">85281</option>
-                                <option value="85041">85041</option>
-                                <option value="85008">85008</option>
-                                <option value="85029">85029</option>
-                                <option value="85031">85031</option>
-                            </select>
-                            <Link to="/properties"><button type="button" onClick={() => {this.props.handleClick(this.state.zip)} }>CLICK MEEHHH</button></Link>
-                    </div>
+            <Header/>
+                <div className='hero'>
+                    <select className="dropDown" onChange={(e) => this.handleChange(e)}>
+                        <option value="">Select a Zipcode</option>
+                        <option value="85281">85281</option>
+                        <option value="85041">85041</option>
+                        <option value="85008">85008</option>
+                        <option value="85029">85029</option>
+                        <option value="85031">85031</option>
+                    </select>
+                        
+                    <Link to="/properties"><button type="button" onClick={() => {this.props.handleClick(this.state.zip)} }>CLICK MEEHHH</button></Link>
                 </div>
             <Footer/>
-                
-            </div>
+        </div>
         );
     }
 }
