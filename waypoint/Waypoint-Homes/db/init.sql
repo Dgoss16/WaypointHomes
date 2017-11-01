@@ -12,7 +12,7 @@ CREATE TABLE UserFaves(
 
 CREATE TABLE Code(
     email VARCHAR(100),
-    propID INTEGER,
+    PropAddress VARCHAR(150)
     code INTEGER,
     Date_time varchar (30) default  TO_CHAR(timestamp, 'yyyy-mm-dd hh:mi AM')
 )
@@ -23,13 +23,12 @@ CREATE TABLE UserInfo(
     LastName
     Phone
     ShowDate
-    ShowTime
-    PropID
+    PropAddress
     
 )
 
 CREATE TABLE Calendar(
-    PropID
+    PropAddress
     showdate
     showtime
 )
