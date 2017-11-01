@@ -67,7 +67,7 @@ export default class Properties extends Component{
             return(
                 <div className='oneprop' key={i}>
                     <div className='fix'>
-                    <Link to="/property"><img src={`https://cah-com-res.cloudinary.com/${x.location}`} onClick={()=>{
+                    <Link className='imgcontainer' to="/property"><img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}`} onClick={()=>{
                        this.props.currentProperty(x)
                    }}/></Link>                
                     <div className='propinfo'>
@@ -89,7 +89,7 @@ export default class Properties extends Component{
 
     render(){
         return(
-            <div>
+            <div class="bigone">
                 <Header/>
                 {this.exampleMap()}
                 <div>{this.state.propertiesUrl}</div>
