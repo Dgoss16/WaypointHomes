@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../../wplogo.png';
-import FontAwesome from 'react-fontawesome';
 import {Link} from 'react-router-dom';
 
 class Header extends Component {
@@ -8,7 +7,7 @@ class Header extends Component {
         return (
             <div>
                 <div className="navbar">
-                     <div className="Logo"> <Link to= '/' style={{textDecoration: 'none', color: "white"}}><img src={logo}/> </Link></div>
+                     <div className="Logo"> <Link to= '/' style={{textDecoration: 'none', color: "white"}}><img src={logo} alt="waypointhomes"/> </Link></div>
                      <div className="Home"> <Link to='/' style={{textDecoration: 'none', color: "white"}}> HOME </Link> </div> 
                      <div className="Find">FIND A HOME</div>
                      <div className="About"><Link to="/about" style={{textDecoration: 'none', color: "white"}}>ABOUT</Link></div>

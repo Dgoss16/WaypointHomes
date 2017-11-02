@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../style/navbar.css';
 import '../../style/home.css';
 import axios from 'axios';
-import logo from '../../wplogo.png';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
 import {Link} from 'react-router-dom'

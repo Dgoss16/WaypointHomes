@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'
-import Footer from '../Navbar/Footer';
+// import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
 import './Properties.css';
 import {Link} from 'react-router-dom'
@@ -30,35 +30,42 @@ export default class Properties extends Component{
                         properties:  res.data,
                         currentProperty: 'https://waypointhomes.com/api/properties?mapBounds=33.35066%2C-112.046321%2C33.521989%2C-111.809429'
                     })
-                });
+                })
+                break;
                 case '85041': 
                 axios.get('https://waypointhomes.com/api/properties?mapBounds=33.210791%2C-112.357154%2C33.553661%2C-111.883369').then((res)=>{
                     this.setState({
                         properties:  res.data,
                         currentProperty: 'https://waypointhomes.com/api/properties?mapBounds=33.210791%2C-112.357154%2C33.553661%2C-111.883369'
                     })
-                });
+                })
+                break;
                 case '85008':
                 axios.get('https://waypointhomes.com/api/properties?mapBounds=33.37735%2C-112.106334%2C33.548625%2C-111.869442').then((res)=>{
                     this.setState({
                         properties:  res.data,
                         currentProperty: 'https://waypointhomes.com/api/properties?mapBounds=33.37735%2C-112.106334%2C33.548625%2C-111.869442'
                     })
-                });
+                })
+                break;
                 case '85029':
                 axios.get('https://waypointhomes.com/api/properties?mapBounds=33.505631%2C-112.226193%2C33.676653%2C-111.989301').then((res)=>{
                     this.setState({
                         properties:  res.data,
                         currentProperty: 'https://waypointhomes.com/api/properties?mapBounds=33.505631%2C-112.226193%2C33.676653%2C-111.989301'
                     })
-                });
+                })
+                break;
                 case '85031':
                 axios.get('https://waypointhomes.com/api/properties?mapBounds=33.411172%2C-112.286579%2C33.582381%2C-112.049686').then((res)=>{
                     this.setState({
                         properties:  res.data,
                         currentProperty: 'https://waypointhomes.com/api/properties?mapBounds=33.411172%2C-112.286579%2C33.582381%2C-112.049686'
                     })
-                });
+                })
+                break;
+                default: 
+                return 
             };
     }
     
@@ -67,8 +74,8 @@ export default class Properties extends Component{
             return(
                 <div className='oneprop' key={i}>
                     <div className='fix'>
-                    <Link className='imgcontainer' to="/property"><img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}`} onClick={()=>{
-                       this.props.currentProperty(x)
+                    <Link className='imgcontainer' to="/property"><img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}` }alt="pretty house" onClick={()=>{
+                       this.props.currentProperty(x), localStorage.setItem('currentProperty', JSON.stringify(x))
                    }}/></Link>                
                     <div className='propinfo'>
                     <h3>{x.address1}</h3>
@@ -88,8 +95,9 @@ export default class Properties extends Component{
     }
 
     render(){
+        console.log(JSON.parse(localStorage.getItem('currentProperty')))
         return(
-            <div class="bigone">
+            <div className="bigone">
                 <Header/>
                 {this.exampleMap()}
                 <div>{this.state.propertiesUrl}</div>

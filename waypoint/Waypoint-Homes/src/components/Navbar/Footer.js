@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../../wplogo.png';
 import FontAwesome from 'react-fontawesome';
-import {Link} from 'react-router-dom';
+
 
 class Footer extends Component {
     render() {

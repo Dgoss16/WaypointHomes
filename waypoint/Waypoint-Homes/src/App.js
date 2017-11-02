@@ -14,7 +14,7 @@ class App extends Component {
     super()
     this.state={
       zip: '',
-      currentProperty: ''
+      currentProperty: {}
     }
     this.handleClick = this.handleClick.bind(this)
     this.currentProperty = this.currentProperty.bind(this)
@@ -53,7 +53,9 @@ class App extends Component {
         <Route exact path='/property' render={()=>(
           <SingleProp propertyInfo = {this.state.currentProperty}/>
         )}/>
-        <Route path='/property/form' component={PropertyForm}/>
+        <Route path='/property/form' render={()=>(
+          <PropertyForm propertyInfo = {this.state.currentProperty}/>
+        )}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
         <Route path='/about' component={AboutUs}/>
