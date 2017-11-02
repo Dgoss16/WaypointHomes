@@ -30,7 +30,7 @@ export default class PropertyForm extends Component{
         })
     }
     render(){
-        console.log(this.props.propertyInfo)
+        console.log('dasfasas',JSON.parse(localStorage.getItem('currentProperty')))
         return(
             <div>
                  <div className="formContainer">
