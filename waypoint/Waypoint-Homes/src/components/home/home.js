@@ -40,6 +40,9 @@ class allProp extends Component {
         return (
         <div>
             <Header/>
+                <div className='hero' >
+                    
+                    
                     <select className="dropDown" onChange={(e) => this.handleChange(e)}>
                         <option value="">Select a Zipcode</option>
                         <option value="85281">85281</option>
@@ -49,7 +52,7 @@ class allProp extends Component {
                         <option value="85031">85031</option></select>
                         
                     <Link to="/properties"><button type="button" className='ghost-button-border-color' onClick={() => {this.props.handleClick(this.state.zip)} }>Search for homes!</button></Link>
-                
+                </div>
             <Footer/>
         </div>
         );
