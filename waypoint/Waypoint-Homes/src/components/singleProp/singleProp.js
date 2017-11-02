@@ -33,6 +33,8 @@ componentDidMount(){
             imageUrl:this.state.photoUrl + res.data.photos[0].public_id,
             propertyPhotos: res.data.photos,
             propertyAddress: this.props.propertyInfo.address1
+
+            
         }, ()=>{
         })
     })
