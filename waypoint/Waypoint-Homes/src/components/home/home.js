@@ -40,7 +40,9 @@ class allProp extends Component {
         return (
         <div>
             <Header/>
-                <div className='hero'>
+                <div className='hero' >
+                    
+                    
                     <select className="dropDown" onChange={(e) => this.handleChange(e)}>
                         <option value="">Select a Zipcode</option>
                         <option value="85281">85281</option>
