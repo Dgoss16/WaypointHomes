@@ -34,7 +34,7 @@ componentDidMount(){
             propertyPhotos: res.data.photos,
             propertyAddress: this.props.propertyInfo.address1
 
-            
+
         }, ()=>{
         })
     })
@@ -169,6 +169,7 @@ showImages(){
                         </select>
                     </form>
                 </div>
+                <a href={process.env.REACT_APP_LOGIN}><button>Form Test</button></a>
                 <Footer/>   
             </div>
         );

@@ -6,7 +6,8 @@ import Favorites from './components/user/favorites';
 import AboutUs from './components/aboutUs/aboutUs';
 import UserInfo from './components/user/userInfo'
 import ContactUs from './components/contactUs/contactUs';
-import Properties from './components/Properties/Properties'
+import Properties from './components/Properties/Properties';
+import PropertyForm from './components/PropertyForm/PropertyForm'
 
 class App extends Component {
   constructor(){
@@ -49,9 +50,10 @@ class App extends Component {
             currentProperty = {this.currentProperty}
           />
         )}/>
-        <Route path='/property' render={()=>(
+        <Route exact path='/property' render={()=>(
           <SingleProp propertyInfo = {this.state.currentProperty}/>
         )}/>
+        <Route path='/property/form' component={PropertyForm}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
         <Route path='/about' component={AboutUs}/>
