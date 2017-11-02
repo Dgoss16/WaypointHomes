@@ -1,0 +1,24 @@
+
+.details{
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.headline{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    background-color: #10B8F6
+}
+
+.primaryimage{
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgcontainer{
+    display: flex;
+}

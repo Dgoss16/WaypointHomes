@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
+import '../../style/singleprops.css';
 
 class singleProp extends Component {
 constructor(){
@@ -58,31 +59,41 @@ showImages(){
     if(this.state.propertyPhotos){
         images = this.state.propertyPhotos.map((x, i)=>{
             return(
-                <div key = {i}>
+                <div  key = {i}>
                     <img src={this.state.photoUrl + x.public_id} alt="pretty house"/>
                 </div>
             )
         })
     }
         return (
-            <div>
+            <div >
                 <Header/>   
-                <div>
-                    <div className="Images"> <img src={this.state.imageUrl} alt="pretty house"/></div>
-                    <div className="textpropdetails">
-                        <div className="propertyImages">
+
+                <div className="headline">
+                    <div>
+                    <h3>{this.props.propertyInfo.address1}</h3>
+                        <p>{this.props.propertyInfo.city}, {this.props.propertyInfo.state} {this.props.propertyInfo.zip}</p>
+                    </div>
+                        <h3>Beds: {this.props.propertyInfo.beds}</h3>
+                        <h3>Baths: {this.props.propertyInfo.baths}</h3>
+                        <h3>SquareFeet: {this.props.propertyInfo.squareFeet}</h3>
+                        <h3>Rent: ${this.props.propertyInfo.effectiveRent}</h3>  
+                        </div>
+
+                <div className='details'>
+                    <div > <img className='primaryimage'src={this.state.imageUrl} alt="pretty house"/></div>
+                    
+                    <div classNAme='imgcontainer'>
                             {images}
                         </div>
-                        <p>Address: {this.props.propertyInfo.address1}</p>
-                        <p>City/State/Zip: {this.props.propertyInfo.city}, {this.props.propertyInfo.state}, {this.props.propertyInfo.zip}</p>
-                        <p>SquareFeet: {this.props.propertyInfo.squareFeet}</p>
-                        <p>Beds :{this.props.propertyInfo.beds}</p>
-                        <p>Baths :{this.props.propertyInfo.baths}</p>
-                        <p>Description: {this.props.propertyInfo.longDescription}</p>
-                        <p>Rent: {this.props.propertyInfo.effectiveRent}</p>                       
+                        
+                        
+                        <div>
+                        <p>Property Description: {this.props.propertyInfo.longDescription}</p>
+                                             
                     </div>          
                 </div>
-               
+                
                 <a href={process.env.REACT_APP_LOGIN}><button>Form Test</button></a>
                 <Footer/>   
             </div>
