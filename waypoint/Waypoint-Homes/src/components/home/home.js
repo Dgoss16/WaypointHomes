@@ -49,11 +49,9 @@ class allProp extends Component {
                         <option value="85041">85041</option>
                         <option value="85008">85008</option>
                         <option value="85029">85029</option>
-                        <option value="85031">85031</option>
-                    </select>
+                        <option value="85031">85031</option></select>
                         
                     <Link to="/properties"><button type="button" className='ghost-button-border-color' onClick={() => {this.props.handleClick(this.state.zip)} }>Search for homes!</button></Link>
-                    {/* <button type="button" class="btn-primary-outline">Default</button> */}
                 </div>
             <Footer/>
         </div>
