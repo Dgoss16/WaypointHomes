@@ -2,6 +2,7 @@
   "name": "waypoint",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3535",
   "dependencies": {
     "axios": "^0.17.0",
     "body-parser": "^1.18.2",
@@ -11,6 +12,7 @@
     "express-session": "^1.15.6",
     "hashrouter": "^1.1.1",
     "massive": "^4.4.0",
+    "nodemailer": "^4.3.1",
     "passport": "^0.4.0",
     "passport-auth0": "^0.6.0",
     "react": "^16.0.0",

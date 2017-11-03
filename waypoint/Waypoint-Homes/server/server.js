@@ -6,7 +6,7 @@ const express = require('express'),
       passport = require('passport'),
       Auth0Strategy = require('passport-auth0'),
       cors = require('cors'),
-    //   nodemailer = require('nodemailer'),
+      nodemailer = require('nodemailer'),
 axios = require('axios') 
       
 const app = express();
@@ -49,6 +49,14 @@ function(accessToken, refreshToken, extraParams, profile, done){
     })
 }))
 
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'waypointhomes2@gmail.com',
+        pass: process.env.EMAIL_PASS
+    }
+});
+
 passport.serializeUser(function(userID, done){
     done(null, userID)
 })
@@ -75,11 +83,31 @@ app.get('/auth/callback', passport.authenticate('auth0', {
     successRedirect: process.env.SUCCESS_REDIRECT,
     failureRedirect: process.env.FAILURE_REDIRECT
 }))
-//database
 
-// app.get('/api/allprops', (req,res) => {
-    
-// })
+app.post('/form/submit', (req, res)=>{
+    let {first, last, phone, email, income, eviction, bankruptcy, credit, appointmentDate, appointmentTime, propertyAddress, code} = req.body
+    req.app.get('db').create_appointment([propertyAddress, first, last, phone, email, income, eviction, bankruptcy, credit, appointmentDate, appointmentTime, code]).then(()=>{
+        var mailOptions = {
+            from: 'waypointhomes2@gmail.com',
+            to: req.body.email,
+            subject: 'Self-Showing',
+            html: `<h1>Self-Showing Created!</h1>
+                   <p>Well look at you ${req.body.first} ${req.body.last}, being all hight-tech and setting up a self showing.</p>
+                   <p>You are good to go and visit ${req.body.propertyAddress} at ${req.body.appointmentTime} on ${req.body.appointmentDate}.</p>
+                   <p>When you arrive ath the house, notice the keypad on the front door. Your keypad will have either a star symbol or checkmark symbol in the bottom left corner.Enter your code:</p>
+                   `
+        }
+        transporter.sendMail(mailOptions, function(error, info){
+            if(error){
+                console.log('email error')
+            }
+            else{
+                console.log('email sent' + info.response);
+            }
+        });
+        res.status(200).send('noice')
+    })
+})
 
 
 

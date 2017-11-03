@@ -2,9 +2,14 @@
     background-color: #10B8F6; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+
+.tc{
+    padding-left:10px
 }

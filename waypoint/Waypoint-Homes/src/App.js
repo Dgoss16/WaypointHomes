@@ -7,7 +7,8 @@ import AboutUs from './components/aboutUs/aboutUs';
 import UserInfo from './components/user/userInfo'
 import ContactUs from './components/contactUs/contactUs';
 import Properties from './components/Properties/Properties';
-import PropertyForm from './components/PropertyForm/PropertyForm'
+import PropertyForm from './components/PropertyForm/PropertyForm';
+import Terms from './components/user/tc'
 
 class App extends Component {
   constructor(){
@@ -60,6 +61,7 @@ class App extends Component {
         <Route path='/userInfo/favorites' component={Favorites}/>
         <Route path='/about' component={AboutUs}/>
         <Route path='/contact' component={ContactUs}/>
+        <Route path='/terms' component={Terms}/>
       </div>
     );
   }
