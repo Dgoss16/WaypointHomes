@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'
 // import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
-import './Properties.css';
+
 import {Link} from 'react-router-dom'
 import '../../style/props.css';
 
