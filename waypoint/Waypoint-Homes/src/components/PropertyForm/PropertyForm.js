@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../../style/T&Cs.css'
 
 
 
@@ -118,6 +119,8 @@ export default class PropertyForm extends Component{
                             <option>7pm</option>
                         </select>
                     </form>
+                    <button className='submit'>SUBMIT</button>
+                    By submitting this form, You have read and agree to our Terms and conditions.
                 </div>
             </div>
         )
