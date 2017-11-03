@@ -28,7 +28,7 @@ export default class PropertyForm extends Component{
             propertyAddress: JSON.parse(localStorage.getItem('currentProperty')).address1 + ', ' + JSON.parse(localStorage.getItem('currentProperty')).city + ', ' + JSON.parse(localStorage.getItem('currentProperty')).state + ', ' + JSON.parse(localStorage.getItem('currentProperty')).zip,
             code: Math.floor(Math.random() * (99999 - 10000) + 10000)
         }, ()=>{
-            
+            console.log(this.state.code)
         })
     }
 
