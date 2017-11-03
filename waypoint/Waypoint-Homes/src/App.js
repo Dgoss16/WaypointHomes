@@ -8,7 +8,8 @@ import UserInfo from './components/user/userInfo'
 import ContactUs from './components/contactUs/contactUs';
 import Properties from './components/Properties/Properties';
 import PropertyForm from './components/PropertyForm/PropertyForm';
-import Terms from './components/user/tc'
+import Terms from './components/user/tc';
+import Deleted from './components/user/deleted';
 
 class App extends Component {
   constructor(){
@@ -34,7 +35,7 @@ class App extends Component {
       zip: x
     }, () => {
       console.log(this.state.zip)
-    })
+    }) 
   }
   
   render() {
@@ -62,6 +63,7 @@ class App extends Component {
         <Route path='/about' component={AboutUs}/>
         <Route path='/contact' component={ContactUs}/>
         <Route path='/terms' component={Terms}/>
+        <Route path='/deleted' component={Deleted}/>
       </div>
     );
   }
