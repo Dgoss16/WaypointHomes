@@ -65,46 +65,182 @@ select {
     z-index: 91;
 }
 .hero{
+    background-repeat: no-repeat;
     width:100%;
     height:90vh;
     background-repeat: no-repeat;
+    background-position: center;
     display:flex;
     position: relative;
     background-size: cover;
     justify-content: center;
     text-align: center;
     align-items: center;
-    -webkit-animation: slider 30s infinite ease-in-out;
+    -webkit-animation: carousel 10s infinite  ;
     -webkit-animation-direction: alternate;
-    animation: slider 30s infinite ease-in-out;
+    animation: carousel 10s infinite ;
     animation-direction: alternate;
-
-    
 }
 
-@keyframes slider{
-   0%{background: url("https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg")} 
-   25% {
+@keyframes carousel{
+   0%{background: url("https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg");
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  } 
+
+  16%{background: url("https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg");
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  } 
+   
+   16% {
     background: url(https://cah-com-res.cloudinary.com/image/upload/s--dsGtwCWI--/q_jpegmini:1/v1452056287/assets/CSH-Waypoint-Carousel-Slider-4_400k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
-  50% {
-    background: url(https://cah-com-res.cloudinary.com/image/upload/s--YV9arKTB--/q_jpegmini:1/v1452055480/assets/CSH-Waypoint-Carousel-Slider-1_800k.jpg); 
+  32% {
+    background: url(https://cah-com-res.cloudinary.com/image/upload/s--dsGtwCWI--/q_jpegmini:1/v1452056287/assets/CSH-Waypoint-Carousel-Slider-4_400k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
-  100% {
+  32% {
+    background: url(https://cah-com-res.cloudinary.com/image/upload/s--YV9arKTB--/q_jpegmini:1/v1452055480/assets/CSH-Waypoint-Carousel-Slider-1_800k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+  }
+  48% {
+    background: url(https://cah-com-res.cloudinary.com/image/upload/s--YV9arKTB--/q_jpegmini:1/v1452055480/assets/CSH-Waypoint-Carousel-Slider-1_800k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+  }
+  48% {
     background: url(https://cah-com-res.cloudinary.com/image/upload/s--eCJtGBwa--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-2_500k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
+  64% {
+    background: url(https://cah-com-res.cloudinary.com/image/upload/s--eCJtGBwa--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-2_500k.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:90vh;
+    background-position: center;
+    display:flex;
+    position: relative;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  } 
 }
 
 
-@-webkit-keyframes slider{
-    0%{background: url("https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg")} 
+@-webkit-keyframes carousel{
+    0%{background: url("https://cah-com-res.cloudinary.com/image/upload/s--J2BLfUso--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-5_400k.jpg");
+      
+      background-repeat: no-repeat;
+      width:100%;
+      height:90vh;
+      background-position: center;
+      display:flex;
+      position: relative;
+      background-size: cover;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
     25% {
      background: url(https://cah-com-res.cloudinary.com/image/upload/s--dsGtwCWI--/q_jpegmini:1/v1452056287/assets/CSH-Waypoint-Carousel-Slider-4_400k.jpg);
+     background-repeat: no-repeat;
+     width:100%;
+     height:90vh;
+     background-position: center;
+     display:flex;
+     position: relative;
+     background-size: cover;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
    }
    50% {
-     background: url(https://cah-com-res.cloudinary.com/image/upload/s--YV9arKTB--/q_jpegmini:1/v1452055480/assets/CSH-Waypoint-Carousel-Slider-1_800k.jpg); 
+     background: url(https://cah-com-res.cloudinary.com/image/upload/s--YV9arKTB--/q_jpegmini:1/v1452055480/assets/CSH-Waypoint-Carousel-Slider-1_800k.jpg);
+     background-repeat: no-repeat ;
+     width:100%;
+     height:90vh;
+     background-position: center;
+     display:flex;
+     position: relative;
+     background-size: cover;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
    }
    100% {
      background: url(https://cah-com-res.cloudinary.com/image/upload/s--eCJtGBwa--/q_jpegmini:1/v1452056288/assets/CSH-Waypoint-Carousel-Slider-2_500k.jpg);
+     background-repeat: no-repeat;
+     width:100%;
+     height:90vh;
+     background-position: center;
+     display:flex;
+     position: relative;
+     background-size: cover;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
    }
  }
