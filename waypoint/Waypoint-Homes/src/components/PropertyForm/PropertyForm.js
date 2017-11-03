@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import axios from 'axios'
 
 
 
@@ -19,18 +19,37 @@ export default class PropertyForm extends Component{
             appointmentDate: '',
             appointmentTime: '',
             propertyAddress: '',
+            code: ''
         }
     }
 
     componentDidMount(){
         this.setState({
-            propertyAddress: this.props.propertyInfo.address1
+            propertyAddress: JSON.parse(localStorage.getItem('currentProperty')).address1 + ', ' + JSON.parse(localStorage.getItem('currentProperty')).city + ', ' + JSON.parse(localStorage.getItem('currentProperty')).state + ', ' + JSON.parse(localStorage.getItem('currentProperty')).zip,
+            code: Math.floor(Math.random() * (99999 - 10000) + 10000)
         }, ()=>{
-            console.log(this.props)
+            
+        })
+    }
+
+    formSubmit(){
+        axios.post('/form/submit', {
+            first: this.state.first,
+            last: this.state.last,
+            phone: this.state.phone,
+            email: this.state.email,
+            income: this.state.income,
+            eviction: this.state.eviction,
+            bankruptcy: this.state.bankruptcy,
+            credit: this.state.credit,
+            appointmentDate: this.state.appointmentDate,
+            appointmentTime: this.state.appointmentTime,
+            propertyAddress: this.state.propertyAddress,
+            code: this.state.code
         })
     }
     render(){
-        console.log('dasfasas',JSON.parse(localStorage.getItem('currentProperty')))
+
         return(
             <div>
                  <div className="formContainer">
@@ -118,6 +137,9 @@ export default class PropertyForm extends Component{
                             <option>7pm</option>
                         </select>
                     </form>
+                    <button onClick={()=>{
+                        this.formSubmit()
+                    }}>Submit</button>
                 </div>
             </div>
         )
