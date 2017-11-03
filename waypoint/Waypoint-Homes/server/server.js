@@ -94,7 +94,17 @@ app.post('/form/submit', (req, res)=>{
             html: `<h1>Self-Showing Created!</h1>
                    <p>Well look at you ${req.body.first} ${req.body.last}, being all hight-tech and setting up a self showing.</p>
                    <p>You are good to go and visit ${req.body.propertyAddress} at ${req.body.appointmentTime} on ${req.body.appointmentDate}.</p>
-                   <p>When you arrive ath the house, notice the keypad on the front door. Your keypad will have either a star symbol or checkmark symbol in the bottom left corner.Enter your code:</p>
+                   <p>When you arrive ath the house, notice the keypad on the front door. Your keypad will have either a star symbol or checkmark symbol in the bottom left corner.Enter your code:${req.body.code} then press the satr or checkmark key. Open Sesame!</p>
+                   <p>Check out the house. Chat in private with your family r roommates and not have to worry about offending anyone.</p>
+                   <p>On the way out please turn off the lights and press the star key on the keypad to lock the door.</p>
+                   <p>Remember your code is only good for 1 hour so if you want to add more time or go back to the home later, <a href='http://waypointhomes.surge.sh'>Schedule Another Appointment</a></p>
+                   <p><a href="http://localhost:3535/delete/${req.body.code}">Or Cancel Your Appointment</a></p>
+                   <br/>
+                   <p>Thank you,</p>
+                   <p>Waypoint Homes</p>
+                   <br/>
+                   <p>If you have any questions or concerns, please do not hesitate to contact us.</p>
+                   <p>Copyright © 2017 Waypoint Homes, All rights reserved.</p>
                    `
         }
         transporter.sendMail(mailOptions, function(error, info){
@@ -107,6 +117,12 @@ app.post('/form/submit', (req, res)=>{
         });
         res.status(200).send('noice')
     })
+})
+
+app.get('/delete/:code', (req, res)=>{
+    req.app.get('db').delete_request([req.params.code]).then(
+        res.redirect('/deleted')
+    )
 })
 
 
