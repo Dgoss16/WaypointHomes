@@ -74,7 +74,7 @@ export default class Properties extends Component{
             return(
                 <div className='oneprop' key={i}>
                     <div className='fix'>
-                    <Link className='imgcontainer' to="/property"><img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}` }alt="pretty house" onClick={()=>{
+                    <Link className='imgcontainer' to="/property"><img className='img' src={`https://cah-com-res.cloudinary.com/${x.location}` }alt="Were sorry, this house currently doesnt have any pictures!" onClick={()=>{
                        this.props.currentProperty(x); localStorage.setItem('currentProperty', JSON.stringify(x))
                    }}/></Link>                
                     <div className='propinfo'>
