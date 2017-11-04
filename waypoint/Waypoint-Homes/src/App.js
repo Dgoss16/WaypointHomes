@@ -10,6 +10,7 @@ import Properties from './components/Properties/Properties';
 import PropertyForm from './components/PropertyForm/PropertyForm';
 import Terms from './components/user/tc';
 import Deleted from './components/user/deleted';
+import Account from './components/Account/Account'
 
 class App extends Component {
   constructor(){
@@ -57,6 +58,9 @@ class App extends Component {
         )}/>
         <Route path='/property/form' render={()=>(
           <PropertyForm propertyInfo = {this.state.currentProperty}/>
+        )}/>
+        <Route path='/account' render={()=>(
+          <Account/>
         )}/>
         <Route exact path='/userInfo' component={UserInfo}/>
         <Route path='/userInfo/favorites' component={Favorites}/>
