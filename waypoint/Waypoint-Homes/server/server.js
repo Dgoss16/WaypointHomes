@@ -121,7 +121,7 @@ app.post('/form/submit', (req, res)=>{
 
 app.get('/delete/:code', (req, res)=>{
     req.app.get('db').delete_request([req.params.code]).then(
-        res.redirect('/deleted')
+        res.redirect('http://localhost:3000/#/deleted')
     )
 })
 

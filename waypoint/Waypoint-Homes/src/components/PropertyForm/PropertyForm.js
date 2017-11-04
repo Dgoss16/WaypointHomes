@@ -54,54 +54,60 @@ export default class PropertyForm extends Component{
 
         return(
             <div>
-                 <div className="formContainer">
+                 <form className="formContainer">
                     <div>Set Up Your Self Showing</div>
-                    <input type='text' placeholder="First Name" onChange={(e)=>{
+                    <input required type='text' placeholder="First Name" onChange={(e)=>{
                         this.setState({
                             first: e.target.value
                         })
                     }}/>
-                    <input type='text' placeholder="Last Name" onChange={(e)=>{
+                    <input required type='text' placeholder="Last Name" onChange={(e)=>{
                         this.setState({
                             last: e.target.value
                         })
                     }}/>
-                    <input type='text' placeholder="(000) 000-0000" onChange={(e)=>{
+                    <input required type='text' placeholder="(000) 000-0000" onChange={(e)=>{
                         this.setState({
                             phone: e.target.value
                         })
                     }}/>
-                    <input type='text' placeholder="Email" onChange={(e)=>{
+                    <input required type='text' placeholder="Email" onChange={(e)=>{
                         this.setState({
                             email: e.target.value
                         })
                     }}/>
                     <div>Monthly Gross Household Income</div>
-                    <input type='text' placeholder="HH income" onChange={(e)=>{
+                    <input required type='text' placeholder="HH income" onChange={(e)=>{
                         this.setState({
                             income: e.target.value
                         })
                     }}/>
-                    <form onChange={(e)=>{
-                        this.setState({
-                            bankruptcy: e.target.value
-                        }, ()=>{
-                            console.log(this.state.bankruptcy)
-                        })
-                    }}>
+                    <fieldset id="group1">
                     <div>Have you ever filed for Bankruptcy</div>
-                        Yes<input type="radio" name="chooseone" value="Yes"/>
-                        No<input type="radio" name="chooseone" value="No"/>
-                    </form>
-                    <form onChange={(e)=>{
+                        Yes<input type="radio" name="group1" value="Yes" onClick={()=>{
                         this.setState({
-                            eviction: e.target.value
+                            bankruptcy: 'yes'
                         })
-                    }}>
+                    }}/>
+                        No<input type="radio" name="group1" value="No" onClick={()=>{
+                        this.setState({
+                            bankruptcy: "no"
+                        })
+                    }}/>
+                    </fieldset>
+                    <fieldset id="group2">
                     <div>Have you ever been Evicted</div>
-                        Yes<input type="radio" name="chooseone" value="Yes"/>
-                        No<input type="radio" name="chooseone" value="No"/>
-                    </form>
+                        Yes<input required type="radio" name="group2" value="Yes" onClick={()=>{
+                        this.setState({
+                            eviction : "Yes"
+                        })
+                    }}/>
+                        No<input required type="radio" name="group2" value="No" onClick={()=>{
+                        this.setState({
+                            eviction : "No"
+                        })
+                    }}/>
+                    </fieldset>
                     <select onChange={(e)=>{
                         this.setState({
                             credit: e.target.value
@@ -112,13 +118,12 @@ export default class PropertyForm extends Component{
                         <option value="Less Than 600">Less Than 600</option>
                         <option value="I Don't Know">I Don't Know</option>
                     </select>
-                    <input type="text" placeholder="MM/DD/YY" onChange={(e)=>{
+                    <input required type="text" placeholder="MM/DD/YY" onChange={(e)=>{
                         this.setState({
                             appointmentDate: e.target.value
                         })
                     }}/>
                     <div>Time</div>
-                    <form>
                         <select onChange={(e)=>{
                         this.setState({
                             appointmentTime: e.target.value
@@ -138,12 +143,11 @@ export default class PropertyForm extends Component{
                             <option>6pm</option>
                             <option>7pm</option>
                         </select>
-                    </form>
                     <button className='submit' onClick={()=>{
                         this.formSubmit()
                     }}>Submit</button>
                     <p className='tc'>By clicking Submit, you have read and agree to our <Link to='/terms'>Terms and Conditions</Link></p>
-                </div>
+                </form>
             </div>
         )
     }
