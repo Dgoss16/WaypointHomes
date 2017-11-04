@@ -15,15 +15,15 @@ class aboutUs extends Component {
                         <p>The new Waypoint Homes is the rising leader in providing quality, single-family rental homes. Stemming from power players, Colony American Homes and Waypoint Homes, the modern real estate company now owns more than 30,000 homes in 10 states across the United States.</p>
                         
 
-<p>Here at Waypoint, we believe renting should be easy. We set ourselves apart, using simplified techniques, and innovative technology to provide reliable homes for our residents.</p>
+                        <p>Here at Waypoint, we believe renting should be easy. We set ourselves apart, using simplified techniques, and innovative technology to provide reliable homes for our residents.</p>
 
-<p>
-Our priority is ensuring residents receive stability, and maintain a peace of mind. With a reputable team with over 10 years of combined single-family rental experience, we are committed to creating an entrepreneurial environment to deliver superior service.
-</p>
+                        <p>
+                        Our priority is ensuring residents receive stability, and maintain a peace of mind. With a reputable team with over 10 years of combined single-family rental experience, we are committed to creating an entrepreneurial environment to deliver superior service.
+                        </p>
 
 
-<p>At the new Waypoint Homes, we want to welcome you, to your home!</p>
-</p>
+                        <p>At the new Waypoint Homes, we want to welcome you, to your home!</p>
+                        </p>
                 </div>
                 <Footer/>   
             </div>
