@@ -9,15 +9,10 @@ class Header extends Component {
                 <div className="navbar">
                      <div className="Logo"> <Link to= '/' style={{textDecoration: 'none', color: "white"}}><img src={logo} alt="waypointhomes"/> </Link></div>
                      <div className="Home"> <Link to='/' style={{textDecoration: 'none', color: "white"}}> HOME </Link> </div> 
-                     <div className="Find">FIND A HOME</div>
                      <div className="About"><Link to="/about" style={{textDecoration: 'none', color: "white"}}>ABOUT</Link></div>
                      <div className="Contact"><Link to="/contact" style={{textDecoration: 'none', color: "white"}}>CONTACT</Link></div>
                      <div className="Login"><Link to="/login" style={{textDecoration: 'none', color: "white"}}>LOGIN</Link> </div>
                 </div>
-
-
-
-                
             </div>
         );
     }
