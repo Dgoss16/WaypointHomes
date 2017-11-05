@@ -13,7 +13,8 @@ class allProp extends Component {
         this.state={
             allprops:[],
             Url:'https://waypointhomes.com/api/properties?mapBounds=33.210791%2C-112.357154%2C33.553661%2C-111.883369',
-            zip:'85281'
+            zip:'85281',
+            home: true
         }
     }
     
@@ -39,7 +40,7 @@ class allProp extends Component {
     render() {
         return (
         <div>
-            <Header/>
+            <Header link={this.state.home}/>
                 <div className='hero' >
                     
                     

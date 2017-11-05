@@ -125,7 +125,9 @@ app.get('/delete/:code', (req, res)=>{
     )
 })
 
-
+app.get('/account', (req, res)=>{
+    
+})
 
 const port=3535
 
