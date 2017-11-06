@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
+import Carousel from 'nuka-carousel';
 import '../../style/singleprops.css';
 
 class singleProp extends Component {
@@ -39,6 +40,8 @@ componentDidMount(){
         })
     })
 }
+
+
 
 showImages(){
     if(this.state.propertyPhotos){
@@ -79,20 +82,18 @@ showImages(){
                         <h3>SquareFeet: {this.props.propertyInfo.squareFeet}</h3>
                         <h3>Rent: ${this.props.propertyInfo.effectiveRent}</h3>  
                         </div>
-
-                <div className='details'>
-                    <div > <img className='primaryimage'src={this.state.imageUrl} alt="pretty house"/></div>
                     
-                    <div classNAme='imgcontainer'>
+                    <div className='imgcontainer2'>
+                        <Carousel className=''>
                             {images}
-                        </div>
+                        </Carousel>
+                    </div>
                         
                         
-                        <div>
-                        <p>Property Description: {this.props.propertyInfo.longDescription}</p>
-                                             
+                    <div>
+                        <p>Property Description: {this.props.propertyInfo.longDescription}</p>                     
                     </div>          
-                </div>
+                
                 
                 <a href={process.env.REACT_APP_LOGIN}><button>Form Test</button></a>
                 <Footer/>   
