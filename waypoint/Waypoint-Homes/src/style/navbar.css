@@ -21,7 +21,7 @@
     bottom: 0;
     height: 8vh;
     left: 0;
-    position: absolute;
+    position: static;
     width: 100%;
 }
 

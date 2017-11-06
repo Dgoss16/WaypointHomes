@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios'
 // import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
-
-import {Link} from 'react-router-dom'
+import Footer from '../Navbar/Footer';
+import {Link} from 'react-router-dom';
 import '../../style/props.css';
 
 export default class Properties extends Component{
@@ -100,6 +100,7 @@ export default class Properties extends Component{
                 <Header/>
                 {this.exampleMap()}
                 <div>{this.state.propertiesUrl}</div>
+                <Footer/>
             </div>
         )
     }
