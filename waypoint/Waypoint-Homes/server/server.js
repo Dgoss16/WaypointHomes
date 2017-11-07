@@ -62,6 +62,7 @@ passport.serializeUser(function(userID, done){
 })
 
 passport.deserializeUser(function(userID, done){
+    console.log('deserializing')
     app.get('db').current_user([userID]).then(user=>{
         done(null, user[0])
     })
@@ -124,9 +125,10 @@ app.get('/delete/:code', (req, res)=>{
         res.redirect('http://localhost:3000/#/deleted')
     )
 })
-
 app.get('/account', (req, res)=>{
-    
+    req.app.get('db').account_info([req.user.email]).then((accountInfo)=>{
+        res.status(200).send(accountInfo)
+    })
 })
 
 const port=3535

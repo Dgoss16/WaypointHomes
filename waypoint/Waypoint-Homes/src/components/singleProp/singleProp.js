@@ -3,7 +3,7 @@ import axios from 'axios';
 import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
 import '../../style/singleprops.css';
-
+import {Link} from 'react-router-dom'
 class singleProp extends Component {
 constructor(){
     super()
@@ -94,7 +94,7 @@ showImages(){
                     </div>          
                 </div>
                 
-                <a href={process.env.REACT_APP_LOGIN}><button>Form Test</button></a>
+               <Link to="/property/form"><button>Form Test</button></Link>
                 <Footer/>   
             </div>
         );

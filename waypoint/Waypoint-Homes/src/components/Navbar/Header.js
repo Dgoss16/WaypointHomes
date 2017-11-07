@@ -11,7 +11,7 @@ class Header extends Component {
                      <div className="Home"> <Link to='/' style={{textDecoration: 'none', color: "white"}}> HOME </Link> </div> 
                      <div className="About"><Link to="/about" style={{textDecoration: 'none', color: "white"}}>ABOUT</Link></div>
                      <div className="Contact"><Link to="/contact" style={{textDecoration: 'none', color: "white"}}>CONTACT</Link></div>
-                     <div className="Login"><a href={process.env.REACT_APP_LOGIN} style={{textDecoration: 'none', color: "white"}}>LOGIN</a> </div>
+                     <div className="Account"><a style={{textDecoration: 'none', color: "white"}} href={process.env.REACT_APP_LOGIN}>Account</a></div>
                 </div>
             </div>
         );

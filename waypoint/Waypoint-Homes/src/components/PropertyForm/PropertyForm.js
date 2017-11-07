@@ -91,7 +91,7 @@ export default class PropertyForm extends Component{
                     }}/>
                         No<input type="radio" name="group1" value="No" onClick={()=>{
                         this.setState({
-                            bankruptcy: "no"
+                            bankruptcy: "No"
                         })
                     }}/>
                     </fieldset>
