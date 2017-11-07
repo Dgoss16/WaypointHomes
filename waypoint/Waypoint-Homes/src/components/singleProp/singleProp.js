@@ -82,7 +82,14 @@ showImages(){
                         <h3>SquareFeet: {this.props.propertyInfo.squareFeet}</h3>
                         <h3>Rent: ${this.props.propertyInfo.effectiveRent}</h3>  
                         </div>
+
+                    <p><h1 className='descriptionTitle'>About this Property</h1></p>
                     
+                    <div className='descriptionContainer'>
+                        <h4>{this.props.propertyInfo.longDescription}</h4>                     
+                    </div>          
+                    
+
                     <div className='imgcontainer2'>
                         <Carousel className=''>
                             {images}
@@ -90,12 +97,9 @@ showImages(){
                     </div>
                         
                         
-                    <div>
-                        <p>Property Description: {this.props.propertyInfo.longDescription}</p>                     
-                    </div>          
                 
                 
-                <a href={process.env.REACT_APP_LOGIN}><button>Form Test</button></a>
+                <a href={process.env.REACT_APP_LOGIN}><button className='formTestButton'>Form Test</button></a>
                 <Footer/>   
             </div>
         );
