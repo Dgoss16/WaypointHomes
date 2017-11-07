@@ -1,12 +1,23 @@
 .oneprop {
     display: flex;
     padding: 20px;
+    height: 250px;
 }
 
 .fix{
     display: flex;
     width: 100vw;
     justify-content: center;
+    height: 100%;
+}
+
+.imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    width: 500px;
 }
 
 .propinfo{
@@ -18,8 +29,7 @@
     color: white;
 }
 
-
  .img{
- width: 500px;
-    height: 100%
+    width: 100%;
+    height: auto;
 }

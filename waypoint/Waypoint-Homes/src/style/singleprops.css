@@ -12,13 +12,28 @@
     background-color: #10B8F6
 }
 
-.primaryimage{
+.imgcontainer2{
     margin: auto;
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    height: 800px;
+    width: 800px;
 }
 
-.imgcontainer{
+.slider-list {
+    height: 800px!important;
+}
+
+.slider-slide {
+    width: 800px!important;
+}
+
+.button {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: stretch;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../wplogo.png';
+import logo from '../../assets/wplogo.png';
 import {Link} from 'react-router-dom';
 
 class Header extends Component {
