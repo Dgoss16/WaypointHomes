@@ -4,7 +4,7 @@ import Footer from '../Navbar/Footer';
 import Header from '../Navbar/Header';
 import Carousel from 'nuka-carousel';
 import '../../style/singleprops.css';
-
+import {Link} from 'react-router-dom'
 class singleProp extends Component {
 constructor(){
     super()
@@ -99,7 +99,7 @@ showImages(){
                         
                 
                 
-                <a href={process.env.REACT_APP_LOGIN}><button className='formTestButton'>Form Test</button></a>
+               <Link to="/property/form"><button>Form Test</button></Link>
                 <Footer/>   
             </div>
         );
