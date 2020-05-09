@@ -22,7 +22,8 @@ constructor(){
         bankruptcy: '',
         credit: '',
         appointmentDate: '',
-        appointmentTime: ''
+        appointmentTime: '',
+        favorite: false
         
     }
 }
@@ -41,6 +42,10 @@ componentDidMount(){
     })
 }
 
+updateFavorite() {
+    this.setState({favorite: true})
+}
+
 
 
 showImages(){
@@ -57,8 +62,9 @@ showImages(){
 }
 
 
-    render() {
-    var images = []
+render() {
+    console.log(this.state.favorite);
+        var images = []
     if(this.state.propertyPhotos){
         images = this.state.propertyPhotos.map((x, i)=>{
             return(
@@ -83,12 +89,16 @@ showImages(){
                         <h3>Rent: ${this.props.propertyInfo.effectiveRent}</h3>  
                         </div>
 
-                    <p><h1 className='descriptionTitle'>About this Property</h1></p>
+                    <h1 className='descriptionTitle'>About this Property</h1>
+                    <button className='favoriteButton' onClick={() => this.setState({ favorite: true })}>Favorite</button>
                     
                     <div className='descriptionContainer'>
                         <h4>{this.props.propertyInfo.longDescription}</h4>                     
-                    </div>          
-                    
+                         
+                    </div> 
+                     <div>
+
+                    </div>
 
                     <div className='imgcontainer2'>
                         <Carousel className=''>

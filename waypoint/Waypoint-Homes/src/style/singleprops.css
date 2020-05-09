@@ -22,11 +22,11 @@
 }
 
 .slider-list {
-    height: 800px!important;
+    height: 700px!important;
 }
 
 .slider-slide {
-    width: 800px!important;
+    width: 900px!important;
 }
 
 .button {
@@ -36,4 +36,30 @@
     justify-content: space-between;
     align-items: flex-end;
     align-content: stretch;
+}
+
+.descriptionTitle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.descriptionContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.226);
+    box-shadow: 10px 10px 5px #888888;
+    margin-top: 3px;
+}
+
+.formTestButton {
+    margin-top: 10px;
+}
+
+.favoriteButton {
+    height: 100px;
+    width: 100px;
+    border:
 }
