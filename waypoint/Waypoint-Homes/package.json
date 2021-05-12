@@ -12,7 +12,7 @@
     "express-session": "^1.15.6",
     "hashrouter": "^1.1.1",
     "massive": "^4.4.0",
-    "nodemailer": "^4.3.1",
+    "nodemailer": "^6.4.16",
     "nuka-carousel": "^3.0.0",
     "passport": "^0.4.0",
     "passport-auth0": "^0.6.0",
